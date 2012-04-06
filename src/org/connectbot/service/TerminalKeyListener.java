@@ -188,10 +188,10 @@ public class TerminalKeyListener implements OnKeyListener, OnSharedPreferenceCha
 
 			int key = event.getUnicodeChar(curMetaState);
 			// no hard keyboard?  ALT-k should pass through to below
-			if ((orgMetaState & KeyEvent.META_ALT_ON) != 0 &&
-					(!hardKeyboard || hardKeyboardHidden)) {
-				key = 0;
-			}
+//			if ((orgMetaState & KeyEvent.META_ALT_ON) != 0 &&
+//					(!hardKeyboard || hardKeyboardHidden)) {
+//				key = 0;
+//			}
 
 			if ((key & KeyCharacterMap.COMBINING_ACCENT) != 0) {
 				mDeadKey = key & KeyCharacterMap.COMBINING_ACCENT_MASK;
